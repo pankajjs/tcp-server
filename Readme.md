@@ -25,7 +25,7 @@
             - Let main thread come back to `accept` system call as soon as possible
 
 ## Drawback
-    The drawback is when a large number of client connects to the server, it creates thread for each requests and causes therad overloading
+    The drawback is when a large number of client connects to the server, it creates thread for each requests and causes thread overloading
 ## Improvements
     1. Limiting the number of threads - We can not just create thread for each requests. There should be some limit on the number of threads.
     2. Add thread pool to save on thread creation time - We can have a thread pool with specfic number of threads. For each requests, we can pick the thread from thread pool, process the request and put the thread back to thread pool
